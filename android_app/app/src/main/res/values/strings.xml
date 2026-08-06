@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI4TB-Mobile</string>
+    <string name="default_server_url">http://192.168.1.3:8501</string>
+    <string name="menu_change_server">Change server address</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The Streamlit dev server (src: TB screening/app/app.py) runs over plain
+  HTTP on the local network, not HTTPS: there is no cert to speak of for
+  a research prototype server that only ever runs on a LAN. This config
+  allows cleartext (HTTP) traffic for all destinations so the WebView can
+  reach it. Fine for a local-network research prototype; would need to
+  change if this ever points at a real public server.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

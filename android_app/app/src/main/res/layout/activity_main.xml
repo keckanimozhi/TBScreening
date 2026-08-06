@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI4TB-Mobile — On-Device Screening"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="#FFF3CD"
+            android:textColor="#664D03"
+            android:text="Research prototype, TRL-3/4 — not a clinical diagnostic tool. Runs fully offline on this device, but models are trained on very limited data. See docs/PROJECT_CHECKLIST.md in the project repo for full caveats." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Symptoms"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/symptomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Chest X-ray (optional)"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/pickXrayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick X-ray image" />
+
+        <ImageView
+            android:id="@+id/xrayPreview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cough recording (optional)"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/recordCoughButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record cough (1s)" />
+
+        <TextView
+            android:id="@+id/coughStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Not recorded" />
+
+        <Button
+            android:id="@+id/runScreeningButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Run screening" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textIsSelectable="true" />
+
+        <Button
+            android:id="@+id/openWebButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Open web dashboard (needs server)" />
+
+    </LinearLayout>
+</ScrollView>
